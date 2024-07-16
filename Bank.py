@@ -543,43 +543,5 @@ main_screen()
 Win.mainloop()
 
 
-# In[ ]:
-
-
-time.strftime ("%d %b,%Y")
-
-
-# In[10]:
-
-
-import sqlite3
-conobj=sqlite3.connect(database="bank.sqlite")
-curobj=conobj.cursor()
-curobj.execute("select max(acn_no) from account")
-tuple=curobj.fetchone()
-print(tuple[0])
-conobj.commit()
-conobj.close()
-
-
-# In[14]:
-
-
-import pandas as pd
-import sqlite3
-conobj=sqlite3.connect(database="bank.sqlite")
-curobj=conobj.cursor()
-curobj.execute("select acn_no,acn_name,acn_bal ,acn_pwd,acn_mob from account where acn_no=1 or acn_no=2 or acn_no=3")
-customer=curobj.fetchall()
-
-df=pd.DataFrame(customer,columns=['acn_no', 'acn_name',  'acn_bal','acn_pwd','acn_mob'])
-
-print(df)
-conobj.close()
-
-
-# In[ ]:
-
-
 
 
