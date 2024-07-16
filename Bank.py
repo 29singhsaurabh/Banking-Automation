@@ -497,12 +497,8 @@ def welcome_screen():
             else:
                 messagebox.showwarning("Transfer","Insufficient Balance")
                 e_amount.delete(0,"end")
-                e_to_acn.delete(0,"end")
+                e_to_acn.delete(0,"end")               
                 
-                
-                           
-                
-        
         btn_submit=Button(ifrm,text="Submit",font=('arial',20,'bold'),bd=5,command=transfer_db)
         btn_submit.place(relx=.43,rely=.65)
 
@@ -532,13 +528,6 @@ def welcome_screen():
     
     btn_transfer=Button(frm,width=10,text="Transfer",font=('arial',20,'bold'),bd=5,command=transfer)
     btn_transfer.place(relx=.0,rely=.54)
-
-
-
-
-
-
-
 main_screen()
 Win.mainloop()
 
